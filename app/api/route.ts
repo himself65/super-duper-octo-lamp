@@ -1,5 +1,6 @@
-export async function GET (req: never) {
-  // log req url
-  console.log(req)
+import { NextRequest } from 'next/server'
+
+export async function GET (req: NextRequest) {
+  console.log(req.url)
   return Response.json({ status: 'ok' })
 }
